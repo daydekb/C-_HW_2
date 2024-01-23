@@ -80,10 +80,16 @@ Console.WriteLine("HW_2_Task_4");
 // а на выходе показывает его цифры через запятую.
 
 void Task4(int num)
-{
-    int result = 0;
-    for (int i = 1; i < num.ToString().Length; i++)
+{ 
+    string str = num.ToString();
+    Char result = str[0];
+    for (var i = 0; i < str.Length; i++)
     {
-        result = num / i * num.ToString().Length
+        result = str[i];
+        Console.Write(result + ", ");
     }
 }
+Console.WriteLine("Input num: ");
+int num = Convert.ToInt32(Console.ReadLine());
+
+Task4(num);
