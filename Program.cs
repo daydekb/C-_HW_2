@@ -19,34 +19,56 @@
 
 // Task1(number);
 
-Console.WriteLine("HW_2_Task_2");
-// Условие задачи:
-// Напишите программу, которая принимает на вход координаты точки (X и Y), 
-// причём X ≠ 0 и Y ≠ 0 и выдаёт номер координатной четверти плоскости, 
-// в которой находится эта точка.
+// Console.WriteLine("HW_2_Task_2");
+// // Условие задачи:
+// // Напишите программу, которая принимает на вход координаты точки (X и Y), 
+// // причём X ≠ 0 и Y ≠ 0 и выдаёт номер координатной четверти плоскости, 
+// // в которой находится эта точка.
 
-void Task2(int X, int Y)
+// void Task2(int X, int Y)
+// {
+//     if (X > 0 && Y > 0)
+//     {
+//         Console.WriteLine("I координатная четверть");
+//     }
+//     if (X < 0 && Y > 0)
+//     {
+//         Console.WriteLine("II координатная четверть");
+//     }
+//     if (X < 0 && Y < 0)
+//     {
+//         Console.WriteLine("III координатная четверть");
+//     }
+//     if (X > 0 && Y < 0)
+//     {
+//         Console.WriteLine("IV координатная четверть");
+//     }
+// }
+// Console.WriteLine("Input X: ");
+// int X = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine("Input Y: ");
+// int Y = Convert.ToInt32(Console.ReadLine());
+
+// Task2(X, Y);
+
+Console.WriteLine("HW_2_Task_3");
+
+// Условие задачи:
+// Напишите программу, которая принимает на вход целое число 
+// из отрезка [10, 99] и показывает наибольшую цифру числа.
+
+void Task3(int num)
 {
-    if (X > 0 && Y > 0)
+    int first = num / 10;
+    int second = num % 10;
+    if (first > second)
     {
-        Console.WriteLine("I координатная четверть");
+        Console.WriteLine($"Рандомное число {num}. {first} > {second}.");
     }
-    if (X < 0 && Y > 0)
+    else
     {
-        Console.WriteLine("II координатная четверть");
-    }
-    if (X < 0 && Y < 0)
-    {
-        Console.WriteLine("III координатная четверть");
-    }
-    if (X > 0 && Y < 0)
-    {
-        Console.WriteLine("IV координатная четверть");
+        Console.WriteLine($"Рандомное число {num}. {second} > {first}.");
     }
 }
-Console.WriteLine("Input X: ");
-int X = Convert.ToInt32(Console.ReadLine());
-Console.WriteLine("Input Y: ");
-int Y = Convert.ToInt32(Console.ReadLine());
-
-Task2(X, Y);
+int num = new Random().Next(10, 99 + 1);
+Task3(num);
