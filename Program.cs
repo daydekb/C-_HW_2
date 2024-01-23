@@ -51,24 +51,39 @@
 
 // Task2(X, Y);
 
-Console.WriteLine("HW_2_Task_3");
+// Console.WriteLine("HW_2_Task_3");
+
+// // Условие задачи:
+// // Напишите программу, которая принимает на вход целое число 
+// // из отрезка [10, 99] и показывает наибольшую цифру числа.
+
+// void Task3(int num)
+// {
+//     int first = num / 10;
+//     int second = num % 10;
+//     if (first > second)
+//     {
+//         Console.WriteLine($"Рандомное число {num}. {first} > {second}.");
+//     }
+//     else
+//     {
+//         Console.WriteLine($"Рандомное число {num}. {second} > {first}.");
+//     }
+// }
+// int num = new Random().Next(10, 99 + 1);
+// Task3(num);
+
+Console.WriteLine("HW_2_Task_4");
 
 // Условие задачи:
-// Напишите программу, которая принимает на вход целое число 
-// из отрезка [10, 99] и показывает наибольшую цифру числа.
+// Напишите программу, которая на вход принимает натуральное число N, 
+// а на выходе показывает его цифры через запятую.
 
-void Task3(int num)
+void Task4(int num)
 {
-    int first = num / 10;
-    int second = num % 10;
-    if (first > second)
+    int result = 0;
+    for (int i = 1; i < num.ToString().Length; i++)
     {
-        Console.WriteLine($"Рандомное число {num}. {first} > {second}.");
-    }
-    else
-    {
-        Console.WriteLine($"Рандомное число {num}. {second} > {first}.");
+        result = num / i * num.ToString().Length
     }
 }
-int num = new Random().Next(10, 99 + 1);
-Task3(num);
